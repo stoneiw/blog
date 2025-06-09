@@ -4,7 +4,7 @@
   extended = true
   min = "0.128.0"
 [[imports]]
-  path = "github.com/stoneiw/hugo-mod-json-resume"
+  path = "github.com/stoneiw/json-resume"
 [[imports.mounts]]
     source = "data"
     target = "data"
