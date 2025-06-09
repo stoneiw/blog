@@ -1,0 +1,110 @@
+.post,
+.content-section {
+  padding: 2rem 1rem;
+  border: 2px solid var(--color-border);
+}
+
+.post {
+  & figure,
+  & img:not(figure img),
+  & video:not(figure video) {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--color-border);
+    box-sizing: border-box;
+  }
+}
+
+.post-header,
+.post-content__read-more {
+  font-family: var(--font-post-header);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 2rem;
+  margin: 1rem;
+}
+
+.post-meta__author {
+  font-weight: 700;
+}
+
+.post-content {
+  margin: 2rem 1rem;
+  font-weight: 500;
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.post-content__read-more {
+  color: var(--primary-alt);
+  margin-top: 1.3rem;
+}
+
+.post-header,
+.post-content {
+  & a {
+    color: var(--primary-alt);
+  }
+
+  & a:hover {
+    color: var(--primary);
+  }
+}
+
+.post-content picture,
+.post-content picture img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.post-tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 1rem 0;
+}
+
+.post-tag {
+  font-size: 0.9rem;
+  line-height: 1;
+
+  &::before {
+    content: "#";
+  }
+}
+
+.post-heading__anchor {
+  display: none;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  & .post-heading__anchor {
+    display: inline-block;
+  }
+}
+
+.youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin: 3rem 0; /* 상하 여백만 유지 */
+  width: 100%; /* 90%에서 100%로 변경 */
+  /* height: 90%; - 이 줄은 제거 (height: 0과 충돌) */
+}
+
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* 900%에서 100%로 수정 */
+  height: 100%;
+  border: 0;
+}

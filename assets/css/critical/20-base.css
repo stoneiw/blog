@@ -1,0 +1,295 @@
+/* Font Import */
+@font-face {
+  font-family: "ChosunSm";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Chosunm";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sogang";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2312-1@1.1/SOGANGUNIVERSITYTTF.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Maruburi";
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
+  src:
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2)
+      format("woff2"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff)
+      format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf)
+      format("truetype");
+}
+
+:root {
+  --font-monospace: "Fira Code", "Maruburi", Monaco, monospace;
+  --font-sans-serif: Verdana, Helvetica, sans-serif;
+  --font-serif: "Noto Serif KR", "Noto Sans KR", system-ui, sans-serif;
+  --font-logo: "Sogang", "ChosunSm", "Noto Serif KR", system-ui;
+  --font-post-header: "Maruburi", "Sogang", system-ui;
+  --font-post: "Chosunm", "Noto Serif KR", system-ui, sans-serif;
+
+  --color-border: var(--bg2);
+}
+
+html {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.675;
+  word-wrap: break-word;
+}
+
+strong {
+  letter-spacing: 0.35px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.link--external::after {
+  /* 2009 = Thin Space */
+  content: "\2009↗";
+}
+
+img,
+video {
+  border: 2px solid var(--bg1);
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  display: inline-block;
+}
+
+figcaption {
+  color: var(--fg3);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+}
+
+*::selection {
+  color: var(--fg0);
+  background: var(--bg4);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--fg0);
+  font-family: var(--font-post-header);
+  font-weight: 100;
+  line-height: 1.4;
+
+  & code {
+    font-size: 1em;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 1px solid var(--bg1);
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.375rem;
+  font-family: var(--font-serif);
+}
+
+h2 {
+  font-size: 2.375rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+@media (--md) {
+  h1 {
+    font-size: 2.375rem;
+  }
+
+  h2 {
+    font-size: 2.375rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.375rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--bg1);
+  padding: 0.5rem;
+}
+
+hr {
+  border: none;
+  background: var(--bg1);
+  height: 1.75px;
+  margin: 4rem auto;
+  width: 80%;
+}
+
+mark {
+  background: var(--yellow1);
+  color: var(--bg0);
+}
+
+abbr {
+  text-underline-offset: 0.2rem;
+}
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  display: inline-block; /* flex 대신 inline-block 쓰셔도 됩니다 */
+  text-align: center;
+  height: 2rem; /* 버튼 높이 */
+  padding: 0 0.75rem; /* 수평 여백만 줌 */
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  border-radius: 0.375rem;
+
+  background-color: var(--bg1);
+  color: var(--fg);
+
+  font-size: 0.875rem;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--bg2);
+}
+button:focus {
+  font-weight: bold;
+  outline: none !important;
+}
+
+blockquote,
+code,
+kbd,
+mark,
+pre {
+  border-radius: 0.2rem;
+  padding: 0 0.2em;
+}
+
+pre code {
+  padding: 0;
+}
+
+blockquote,
+code,
+kbd,
+pre,
+th {
+  background: var(--bg1);
+}
+
+code,
+kbd,
+pre,
+th {
+  font-family: var(--font-post-header);
+}
+
+code,
+kbd {
+  & code,
+  & kbd {
+    background: var(--bg2);
+  }
+}
+
+blockquote,
+pre {
+  margin: 0;
+  padding: 1rem;
+}
+
+blockquote p {
+  text-align: right !important;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+blockquote img {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+blockquote:last-child {
+  margin-top: 10em;
+}
+
+pre {
+  /* TODO is !important really needed because of Prism? */
+  background: var(--bg1) !important;
+  overflow: auto;
+
+  & code {
+    background: none;
+  }
+}

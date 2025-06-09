@@ -1,0 +1,41 @@
+{{ $ctx := .Page }}
+{{ $cats := .Cats }}
+{{ $section  := .Target }}
+
+{{/* ─── 0. 현재 카테고리 결정 ───────────────────────── */}}
+{{ $currentCat := "" }}
+{{ if eq $ctx.Section $section }}
+  {{ if eq $ctx.Kind "taxonomyTerm" }}
+    {{ $currentCat = $ctx.Title }}
+  {{ else }}
+    {{ $currentCat = (index $ctx.Params.categories 0 | default "") }}
+  {{ end }}
+{{ end }}
+
+
+<details class="widget widget--categories" open>
+  <summary class="widget__header">카테고리</summary>
+  <ul class="widget__list">
+    {{/* ───── 섹션별 글만 모아 최신 글 링크 걸기 ───── */}}
+    {{ range $name, $taxonomy := $cats }}
+      {{ $pages := where $taxonomy.Pages "Section" $section }}
+      {{ if gt (len $pages) 0 }}
+        {{ $latest := index (sort $pages "Date" "desc") 0 }}
+        <li class="widget__item">
+          {{ if eq $name $currentCat }}
+            <strong>
+              <a href="{{ $latest.RelPermalink }}" class="widget__link">
+                {{ upper $name }} ({{ len $pages }})
+              </a>
+            </strong>
+          {{ else }}
+            <a href="{{ $latest.RelPermalink }}" class="widget__link">
+              {{ upper $name }} ({{ len $pages }})
+            </a>
+          {{ end }}
+        </li>
+      {{ end }}
+    {{ end }}
+
+  </ul>
+</details>

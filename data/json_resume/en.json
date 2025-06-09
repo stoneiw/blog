@@ -1,0 +1,31 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+
+
+  
+  "basics": {
+    "name": "돌회장",
+    "label": "stone_iw",
+    "image": "https://i.imgur.com/L1vpUbQ.png",
+    "email": "ishisan31@gmail.com",
+    "summary": "아이워너",
+    "location": {
+      "city": "South Korea"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "Github",
+        "url": ""
+      }
+    ]
+  },
+
+
+  "interests": [
+    {
+      "name": "",
+      "keywords": []
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+.jr__item-meta {
+  flex-direction: column;
+}
+
+.jr__item-meta,
+.jr-basics__image,
+.jr-basics__item,
+.jr-basics__profile-icon,
+.jr-basics__profile-item {
+  align-items: center;
+  display: flex;
+}
+
+.jr-awards__title,
+.jr-certificates__name,
+.jr-education__area,
+.jr-projects__roles,
+.jr-publications__name,
+.jr-volunteer__position,
+.jr-work__position,
+.jr-basics__name {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.jr-basics__item {
+  flex-direction: column;
+  text-align: center;
+}
+
+.jr-basics__item hr {
+  margin: 1.5rem auto;
+}
+
+.jr-basics__image {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  justify-content: center;
+  overflow: hidden;
+
+  background: var(--bg1);
+  border: 2px solid var(--color-border);
+}
+
+.jr-basics__name,
+.jr-basics__label,
+.jr-basics__summary {
+  font-family: var(--font-serif);
+}
+
+.jr-basics__name {
+  margin-top: 0.5rem;
+}
+
+.jr-basics__label {
+  font-size: 0.8rem;
+  margin-top: 0;
+  opacity: 0.6;
+}
+
+.jr-basics__summary {
+  margin-top: 0;
+}
+
+.jr-basics__profile svg {
+  height: 24px;
+  width: 24px;
+}
+
+.jr-basics__profile,
+.jr-basics__profile-item {
+  display: flex;
+}
+
+.jr-basics__profile-item {
+  display: flex;
+  padding: 0.2rem;
+}
+
+.jr-basics__profile--col {
+  flex-direction: column;
+}
+
+.jr-basics__profile--row {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.jr-basics__profile-icon {
+  padding: 0 0.75rem;
+}

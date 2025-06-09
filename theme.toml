@@ -1,0 +1,18 @@
+name = "Gruvbox"
+license = "MIT"
+licenselink = "https://github.com/stoneiw/blog/blob/main/LICENSE"
+description = "A custom-theme based on the hugo-gruvbox-theme by schnerring"
+homepage = "https://github.com/stoneiw/blog"
+demosite = "https://stoneiw.com"
+tags = [
+  "blog",
+  "dark mode",
+  "minimal",
+  "personal",
+  "responsive"
+]
+features = ["dark mode"]
+
+[author]
+  name = "stoneiw"
+  homepage = "https://stoneiw.com"

@@ -1,0 +1,116 @@
+baseURL = "http://localhost"
+copyright = "Copyright © 2025"
+title = "돌회장"
+#paginate = 10
+enableRobotsTXT = true
+# Enable to calculate the last modified date from Git history and show it in the post header
+#enableGitInfo = true
+
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    # With each build, Hugo writes a hugo_stats.json file that contains arrays
+    # of the class attributes, id attributes, and tags of each HTML element 
+    # within the published site. For production builds, this file is required 
+    # by PurgeCSS to prune unused CSS.
+    enable = true
+
+[markup]
+  [markup.goldmark] 
+    [markup.goldmark.renderer]
+      # This setting allows inlining <script> and <style> tags in markdown, 
+      # which is useful and required to use Prism plugins, but may be dangerous 
+      # if the content isn't trustworthy.
+      unsafe = true
+
+[imaging]
+  # JPEG and WebP image processing quality, defaults to 75%
+  #quality = 75
+
+[outputs]
+  home = ["html", "rss", "searchIndex"]
+
+[outputFormats]
+  [outputFormats.searchIndex]
+    mediaType = "application/json"
+    baseName = "search-index"
+    isPlainText = true
+    notAlternative = true
+
+
+[params]
+  # dark or light, defaults to light. Local storage and OS preference override this param. For more details see: 
+  # https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375
+  #defaultTheme = "light"
+
+  # gray red green yellow blue purple aqua orange, defaults to blue
+  #themeColor = "blue"
+
+  # soft medium hard, defaults to medium
+  #themeContrast = "medium"
+  author = "돌회장"
+  subtitle = "stone_iw"
+  description = ""
+
+  [params.logo]
+    text = "돌회장"
+    url = "/"
+
+  [params.prism]
+    languages = [
+      "markup",
+      "css",
+      "clike",
+      "javascript",
+      "bash",
+      "diff",
+      "toml"
+    ]
+    plugins = [
+      "normalize-whitespace",
+      "toolbar",
+      "copy-to-clipboard",
+      "line-numbers",
+      "command-line",
+      "diff-highlight"
+    ]
+  
+  # By default, the theme creates resized versions of images ranging from 300 to
+  # 700 pixels wide in increments of 200 pixels
+  #[params.imageResize]
+  #  min = 300
+  #  max = 700
+  #  increment = 200
+  
+  [params.tagCloud]
+    enable = false
+    minFontSizeRem = 0.8
+    maxFontSizeRem = 2.0
+
+  # Social share links for posts:
+  #   - iconSuite: "simple-icon" or "tabler-icon"
+  #   - iconName: name of the icon from the "iconSuite"
+  #   - {url} placeholder for post .Permalink
+  #   - {title} placeholder for post .Title
+  # See  https://github.com/bradvin/social-share-urls for more format strings
+
+  [[params.socialShare]]
+    iconSuite = "tabler-icon"
+    iconName = "outline/mail"
+    formatString = "mailto:?subject={title}&body={url}"
+
+[menu]
+  [[menu.main]]
+
+
+[permalinks]
+    blog = "/:slug"
+    study = "/:slug"
+
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 10
+    [languages.en.params.jsonResume]
+      present = "present"
