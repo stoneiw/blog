@@ -1,8 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
 
-
-  
   "basics": {
     "name": "돌회장",
     "label": "stone_iw",
@@ -10,7 +8,7 @@
     "email": "ishisan31@gmail.com",
     "summary": "아이워너",
     "location": {
-      "city": "South Korea"
+      "city": ""
     },
     "profiles": [
       {
@@ -20,7 +18,6 @@
       }
     ]
   },
-
 
   "interests": [
     {
