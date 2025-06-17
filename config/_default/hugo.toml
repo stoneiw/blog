@@ -104,8 +104,7 @@ enableRobotsTXT = true
 
 
 [permalinks]
-    blog = "/:slug"
-    study = "/:slug"
+    review = "/:slug"
 
 
 [languages]

@@ -30,13 +30,6 @@
     )
   }}
 
-  {{ partial "widget-categories.html" (dict
-    "Page"    .
-    "Cats"    $cats
-    "Target"  "study"
-    )
-  }}
-
   {{ if $.Site.Params.tagCloud.enable }}
     <aside>
       {{ partial "tag-cloud.html" . }}
