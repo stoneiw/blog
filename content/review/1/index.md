@@ -1,8 +1,8 @@
 ---
 number: 0
 slug: "1"
-title: "I wanna Lap Around"
-date: "2025-06-09"
+title: "댕댕댕"
+date: "2025-06-17"
 categories: ["리뷰"]
 types: ["review"]
 
@@ -15,7 +15,7 @@ rating: 0
 link: ""
 
 # 1. 초안 여부: true면 hugo server에만 노출, 실제 빌드 시 제외
-draft: true
+draft: false
 
 # 2. 태그 (optional)
 tags: []
@@ -29,3 +29,5 @@ comments: false
 #  alt: ""
 #  caption: ""
 ---
+
+바보 아니야?
